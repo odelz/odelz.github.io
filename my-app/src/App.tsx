@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import './App.css';
 import ButtonAppBar from './components/ButtonAppBar';
 import Inspiration from './pages/Inspiration';
@@ -9,7 +9,6 @@ import Contact from './pages/Contact';
 
 function App() {
   return (
-    <BrowserRouter>
     <div className="App">
         <ButtonAppBar/> 
         <Routes>
@@ -19,8 +18,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
         </Routes>
   </div>
-  </BrowserRouter>
-  );
+);
 }
 
 export default App;
