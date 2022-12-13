@@ -10,7 +10,7 @@ import Calendar from './pages/Calendar';
 
 function App() {
   return (
-    <div className="App">
+    <div className="Appn">
         <NavBar/> 
         <Routes>
           <Route path="/" element={<Home />} />
