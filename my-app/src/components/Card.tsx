@@ -15,11 +15,6 @@ import ShareIcon from '@mui/icons-material/Share';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 
-git checkout working
-git merge -s ours --no-commit main
-git commit      #replace master
-git checkout main
-git merge working
 
 interface ExpandMoreProps extends IconButtonProps {
   expand: boolean;
