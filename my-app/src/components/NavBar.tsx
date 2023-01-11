@@ -19,8 +19,11 @@ export default function NavBar() {
           < Link color = "#FFFFFF" component={RouterLink} to="/inspiration" sx = {{p: 1}}>
             Inspiration
           </Link>
+          < Link color = "#FFFFFF" component={RouterLink} to="/codingportfolio" sx = {{p: 1}}>
+            Stuff I've Coded
+          </Link>
           < Link color = "#FFFFFF" component={RouterLink} to="/portfolio" sx = {{p: 1}}>
-            Fine Arts Portfolio
+            Design Portfolio
           </Link>
           < Link color = "#FFFFFF" component={RouterLink} to="/calendar" sx = {{p: 1}}>
             Calendar

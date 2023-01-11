@@ -46,6 +46,7 @@
       "last 1 safari version"
     ]
   },
+  "typeRoots": [ "./node_modules/@types" ],
   "devDependencies": {
     "@types/jest": "^27.5.2",
     "@types/node": "^16.18.6",
