@@ -8,22 +8,26 @@
     "@emotion/styled": "^11.10.5",
     "@mui/icons-material": "^5.10.16",
     "@mui/material": "^5.10.17",
+    "@rollup/plugin-terser": "^0.3.0",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "core-js": "^3.27.1",
     "firebase": "^9.15.0",
     "googleapis": "^109.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-firebase-hooks": "^5.1.1",
     "react-router-dom": "^6.4.4",
-    "react-scripts": "5.0.1",
+    "react-scripts": "^2.1.8",
+    "svgo": "^3.0.2",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "dev": "(if exist .next rd /s /q .next 2>nul) && next dev",
+    "start": "react-scripts --openssl-legacy-provider start",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -b master -d build",
+    "deploy": "gh-pages -b main -d build",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -46,7 +50,9 @@
       "last 1 safari version"
     ]
   },
-  "typeRoots": [ "./node_modules/@types" ],
+  "typeRoots": [
+    "./node_modules/@types"
+  ],
   "devDependencies": {
     "@types/jest": "^27.5.2",
     "@types/node": "^16.18.6",
