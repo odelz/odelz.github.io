@@ -12,7 +12,7 @@ export default function NavBar() {
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static" color='primary' >
-        <Toolbar sx={{ justifyContent: "space-between"}}>
+        <Toolbar variant = "dense" sx={{ justifyContent: "space-between"}}>
           < Link variant = "h6" color = "#000000" underline="none" component={RouterLink} to="/" sx = {{p: 1}}>
             Odelia Huang
           </Link>

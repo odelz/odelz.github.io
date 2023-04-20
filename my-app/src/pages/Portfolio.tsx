@@ -16,9 +16,10 @@ type Props = {}
 
 const Portfolio = (props: Props) => {
   return (
-    <Box>
+    <Box sx={{marginTop:"-2rem", background: "linear-gradient(to bottom, #f18bce, #d7aefb, #fff9e3);", height: "100vh" }}>
       <Typography variant="h3" sx={{ fontFamily: 'NotoSerifDisplay-VariableFont', textAlign: "center", marginTop: "2rem" }}>
-        WIP</Typography>
+        WIP
+        </Typography>
         <Box sx={{display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center", marginTop: "2rem"}}>
           
       <ProjectCard title = "Tephinet Infographics" logo = {logo} img = {[teph1, teph2, teph3, teph4]} description="TEPHINET's target audience is individuals who already tend to be familiar with their goal, which is to serve all people through standardized training, experiential learning, training program quality improvement, mentoring, and knowledge exchanges in order to connect epidemiologists better, faster, and with quality across the globe. Graphics are intended to be modern and appealing to the eye. This was a really fun project because I was able to use almost any graphics/organization I wanted as long as the information was clearly portrayed." date = "28 December 2018" subtitle = "Social media graphics dispersing information gathered from surveys given to TEPHINET (Training Programs in Epidemiology and Public Health Interventions Network ) member groups, known as FETPs (field epidemiology training programs).">
