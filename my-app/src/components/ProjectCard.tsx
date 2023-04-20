@@ -1,4 +1,5 @@
 import { FC, useState } from 'react';
+import * as React from 'react';
 import { styled } from '@mui/material/styles';
 import Card from '@mui/material/Card';
 import CardHeader from '@mui/material/CardHeader';
@@ -51,7 +52,7 @@ const ProjectCard: FC<ProjectCardProps> = ({ title, logo, img, description, date
     <Card sx={{ maxWidth: 345 }}>
       <CardHeader
         avatar={
-          <Avatar sx={{ bgcolor: red[500] }} src={logo} aria-label={title}>
+          <Avatar src={logo} aria-label={title}>
 
           </Avatar>
         }

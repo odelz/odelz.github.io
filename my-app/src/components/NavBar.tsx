@@ -11,26 +11,20 @@ import {signInWithGoogle}  from ".././config.js"
 export default function NavBar() {
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static" >
-        <Toolbar >
-          < Link variant = "h6" color = "#FFFFFF" underline="none" component={RouterLink} to="/" sx = {{p: 1}}>
+      <AppBar position="static" color='primary' >
+        <Toolbar sx={{ justifyContent: "space-between"}}>
+          < Link variant = "h6" color = "#000000" underline="none" component={RouterLink} to="/" sx = {{p: 1}}>
             Odelia Huang
           </Link>
-          < Link color = "#FFFFFF" component={RouterLink} to="/inspiration" sx = {{p: 1}}>
-            Inspiration
-          </Link>
-          < Link color = "#FFFFFF" component={RouterLink} to="/codingportfolio" sx = {{p: 1}}>
-            Stuff I've Coded
-          </Link>
-          < Link color = "#FFFFFF" component={RouterLink} to="/portfolio" sx = {{p: 1}}>
-            Design Portfolio
-          </Link>
-          < Link color = "#FFFFFF" component={RouterLink} to="/calendar" sx = {{p: 1}}>
-            Calendar
-          </Link>
-          <Link color = "#FFFFFF" onClick={signInWithGoogle}>
-            Log In With Google
-          </Link>
+          <div/>
+          <Box>
+            < Link color = "#000000" underline="none" component={RouterLink} to="/inspiration" sx = {{p: 1}}>
+              Inspiration
+            </Link>
+            < Link color = "#000000" underline="none" component={RouterLink} to="/portfolio" sx = {{p: 1}}>
+              Portfolio
+            </Link>
+          </Box>
         </Toolbar>
       </AppBar>
     </Box>
