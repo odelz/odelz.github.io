@@ -3,13 +3,17 @@ import { Box, Typography, Container } from '@mui/material'
 import me from '../img/IMG_3551.jpg'
 import '../index.css';
 import ScrollingTextBanner from '../components/ScrollingTextBanner';
-
+import useMediaQuery from '@mui/material/useMediaQuery';
+import { useTheme } from '@mui/material/styles';
 type Props = {}
 
+
 const Home = (props: Props) => {
+  const theme = useTheme();
+  const isSmallScreen = useMediaQuery(theme.breakpoints.down('md'));
   return (
     <div>
-      <Box sx={{ display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", background: "linear-gradient(to bottom, #fff9e3, #d7aefb, #f18bce);", height: "auto", minHeight: "100vh" }}>
+      <Box sx={{ display: "flex", flexDirection: isSmallScreen ? "column" : "row", justifyContent: "center", alignItems: "center", background: "linear-gradient(to bottom, #fff9e3, #d7aefb, #f18bce);", height: "auto", minHeight: "100vh" }}>
         <div className="about-text">
         <Typography variant="h3" sx={{ fontFamily: 'NotoSerifDisplay-VariableFont' }}>
             Hi, nice to meet you, I'm Odelia.
