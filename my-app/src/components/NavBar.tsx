@@ -4,7 +4,6 @@ import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import { Button, Link } from '@mui/material';
-import MenuIcon from '@mui/icons-material/Menu';
 import { Navigate, Link as RouterLink } from 'react-router-dom';
 import {signInWithGoogle}  from ".././config.js"
 
@@ -23,6 +22,9 @@ export default function NavBar() {
             </Link>
             < Link color = "#000000" underline="none" component={RouterLink} to="/portfolio" sx = {{p: 1}}>
               Portfolio
+            </Link>
+            < Link color = "#000000" underline="none" component={RouterLink} to="/contact" sx = {{p: 1}}>
+              Contact
             </Link>
           </Box>
         </Toolbar>
