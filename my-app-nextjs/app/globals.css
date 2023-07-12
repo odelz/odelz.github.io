@@ -1,0 +1,156 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+.home {
+  background: linear-gradient(to bottom, #fff9e3, #d7aefb, #f18bce);
+    display: 'flex';
+    justify-content: 'center';
+    align-items: 'center';
+    height: 'auto';
+    min-height: '100vh';
+}
+
+
+.nav {
+  height: 50px;
+  width: 100%;
+  background-color: #60a1e7;
+  position: relative;
+}
+
+.nav > .nav-header {
+  display: inline;
+}
+
+.nav > .nav-header > .nav-title {
+  display: inline-block;
+  font-size: 22px;
+  color: #fff;
+  padding: 10px 10px 10px 10px;
+}
+
+.nav > .nav-btn {
+  display: none;
+}
+
+.nav > .nav-links {
+  display: inline;
+  float: right;
+  font-size: 18px;
+}
+
+.nav > .nav-links > a {
+  display: inline-block;
+  padding: 13px 10px 13px 10px;
+  text-decoration: none;
+  color: #efefef;
+}
+
+.nav > .nav-links > a:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.nav > #nav-check {
+  display: none;
+}
+
+@media (max-width:600px) {
+  .nav > .nav-btn {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+  }
+  .nav > .nav-btn > label {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 13px;
+  }
+  .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  .nav > .nav-btn > label > span {
+    display: block;
+    width: 25px;
+    height: 10px;
+    border-top: 2px solid #eee;
+  }
+  .nav > .nav-links {
+    position: absolute;
+    display: block;
+    width: 100%;
+    background-color: #333;
+    height: 0px;
+    transition: all 0.3s ease-in;
+    overflow-y: hidden;
+    top: 50px;
+    left: 0px;
+  }
+  .nav > .nav-links > a {
+    display: block;
+    width: 100%;
+  }
+}
+
+
+.todo-container {
+  background-color: #d7aefb;
+  color: #00A8E8;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh; /* Added to make the container occupy the full viewport height */
+
+}
+.todo {
+  color:#00A8E8;
+  margin:auto;
+  text-align: center;
+  align-items: center;
+  max-width: 400px; /* Added to limit the width of the todo container */
+  padding: 20px; /* Added padding for better spacing */
+}
+.todo-header {
+  color: #00A8E8;
+  font-size: 30px;
+  margin-bottom: 20px; /* Added margin bottom for spacing */
+  text-align: center;
+}
+.todo-btn {
+  text-align: center;
+  background-color: #00A8E8;
+  color:#FFFFFF;
+  display: inline-block;
+  font-size: 16px;
+  padding: 15px 32px;
+  margin-top: 20px; /* Added margin top for spacing */
+  border-radius: 5px; /* Added border-radius for rounded corners */
+
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+}
+
+.grid-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
