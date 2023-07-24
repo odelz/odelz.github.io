@@ -154,3 +154,47 @@
   justify-content: center;
   align-items: center;
 }
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  background-color: #ffffff; /* Replace with your desired background color */
+  text-decoration: none;
+  transition: background-color 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.scrollContainer {
+  display: flex;
+  font-family: 'Karla', sans-serif;
+  align-items: center;
+  font-size: 1.25rem;
+  width: 100%;
+  min-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  animation: marquee 20s linear infinite;
+}
+
+
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Hide the scrollbar */
+.scrollContainer::-webkit-scrollbar {
+  display: none;
+}
+
+.banner {
+  background-color: #1976d2; /* Replace with your desired background color */
+}
