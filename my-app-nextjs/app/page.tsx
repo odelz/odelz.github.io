@@ -3,7 +3,9 @@ import Image from 'next/image'
 import me from './profile.jpg'
 import { Noto, NotoItalic } from '../styles/fonts'
 import Layout from './components/Layout';
+
 export default function Page() {
+
   return (
     < Layout>
       <div className='home'>
