@@ -14,8 +14,10 @@ const firebaseConfig = () => {
     measurementId: process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID,
   };
 
+  
   if (getApps().length <= 0) {
     const app = initializeApp(clientCredentials);
+
     // Check that `window` is in scope for the analytics module!
     if (typeof window !== 'undefined') {
       // Enable analytics. https://firebase.google.com/docs/analytics/get-started
@@ -26,7 +28,6 @@ const firebaseConfig = () => {
     return app;
   }
 };
-
 if (getApps().length <= 0) {
   firebaseConfig();
 }
