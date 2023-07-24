@@ -1,6 +1,6 @@
 'use client'
 import { FC, useState } from 'react';
-
+import Image from 'next/image';
 interface ProjectCardProps {
   title: string;
   description: string;
@@ -27,7 +27,7 @@ const ProjectCard: FC<ProjectCardProps> = ({ title, description, color, image })
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      {image && <img src={image} alt={title} style={imageStyle} />}
+      {image && <Image src={image} alt={title} style={imageStyle} />}
       <h3>{title}</h3>
       <p>{description}</p>
     </div>
