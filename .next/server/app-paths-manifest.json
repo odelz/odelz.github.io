@@ -1,9 +1,0 @@
-{
-  "/page": "app/page.js",
-  "/favicon.ico/route": "app/favicon.ico/route.js",
-  "/bookshelf/page": "app/bookshelf/page.js",
-  "/calendar/page": "app/calendar/page.js",
-  "/contact/page": "app/contact/page.js",
-  "/portfolio/page": "app/portfolio/page.js",
-  "/todolist/page": "app/todolist/page.js"
-}
