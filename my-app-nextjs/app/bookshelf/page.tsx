@@ -17,7 +17,7 @@ const MyBooksPage = () => {
   const reference = ref(db, "books/");
 
   const fetchBooks = async () => {
-    onValue(reference, (snapshot) => {
+    onValue(reference, (snapshot: { val: () => any; }) => {
       const data = snapshot.val();
       if (Array.isArray(data)) {
         const books = data.filter((book: Book) => typeof book === 'object' && book !== null && 'title' in book && 'review' in book);
