@@ -348,24 +348,24 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-const images = [
-    {
-        src: "blender.png",
-        title: "Image 1",
-        description: "Description for Image 1"
-    },
-    {
-        src: "prolon.jpg",
-        title: "Image 2",
-        description: "Description for Image 2"
-    },
-    {
-        src: "prolon3.jpg",
-        title: "Image 3",
-        description: "Description for Image 3"
-    }
-];
 const PortfolioPage = (props)=>{
+    const images = [
+        {
+            src: "blender.png",
+            title: "Image 1",
+            description: "Description for Image 1"
+        },
+        {
+            src: "prolon.jpg",
+            title: "Image 2",
+            description: "Description for Image 2"
+        },
+        {
+            src: "prolon3.jpg",
+            title: "Image 3",
+            description: "Description for Image 3"
+        }
+    ];
     const [selectedImage, setSelectedImage] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(null);
     const handleClick = (image)=>{
         setSelectedImage(image);

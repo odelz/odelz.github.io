@@ -18,13 +18,6 @@
       "static/css/fb78eebdb5d3911c.css",
       "static/chunks/app/layout-dcef33180bea0059.js"
     ],
-    "/calendar/page": [
-      "static/chunks/webpack-89a5b68a49b47040.js",
-      "static/chunks/fd9d1056-c9eb6f688b3961a6.js",
-      "static/chunks/596-547d92dce03e0a0e.js",
-      "static/chunks/main-app-468841f39127b91a.js",
-      "static/chunks/app/calendar/page-360f2a59d2b63229.js"
-    ],
     "/bookshelf/page": [
       "static/chunks/webpack-89a5b68a49b47040.js",
       "static/chunks/fd9d1056-c9eb6f688b3961a6.js",
@@ -34,6 +27,13 @@
       "static/chunks/222-ae9a4e8d75ee2afe.js",
       "static/chunks/751-d3c114aa67bdb1e4.js",
       "static/chunks/app/bookshelf/page-2feeaadf6b7b5416.js"
+    ],
+    "/calendar/page": [
+      "static/chunks/webpack-89a5b68a49b47040.js",
+      "static/chunks/fd9d1056-c9eb6f688b3961a6.js",
+      "static/chunks/596-547d92dce03e0a0e.js",
+      "static/chunks/main-app-468841f39127b91a.js",
+      "static/chunks/app/calendar/page-360f2a59d2b63229.js"
     ],
     "/contact/page": [
       "static/chunks/webpack-89a5b68a49b47040.js",
@@ -50,7 +50,7 @@
       "static/chunks/main-app-468841f39127b91a.js",
       "static/chunks/685-86f306acecfc3230.js",
       "static/chunks/222-ae9a4e8d75ee2afe.js",
-      "static/chunks/app/portfolio/page-a38f85bcd3d44ea5.js"
+      "static/chunks/app/portfolio/page-1711f6df8240a75a.js"
     ],
     "/todolist/page": [
       "static/chunks/webpack-89a5b68a49b47040.js",

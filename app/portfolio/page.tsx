@@ -4,36 +4,33 @@ import Layout from '../components/Layout';
 import Image from 'next/image';
 
 
-
 interface ImageData {
   src: string;
   title: string;
   description: string;
 }
 
-const images: ImageData[] = [
-  {
-    src: 'blender.png',
-    title: 'Image 1',
-    description: 'Description for Image 1',
-  },
-  {
-    src: 'prolon.jpg',
-    title: 'Image 2',
-    description: 'Description for Image 2',
-  },
-  {
-    src: 'prolon3.jpg',
-    title: 'Image 3',
-    description: 'Description for Image 3',
-  },
-  // Add more images with titles and descriptions...
-];
-
 type Props = {}
 
 const PortfolioPage = (props: Props) => {
 
+  const images: ImageData[] = [    {
+      src: 'blender.png',
+      title: 'Image 1',
+      description: 'Description for Image 1',
+    },
+    {
+      src: 'prolon.jpg',
+      title: 'Image 2',
+      description: 'Description for Image 2',
+    },
+    {
+      src: 'prolon3.jpg',
+      title: 'Image 3',
+      description: 'Description for Image 3',
+    },
+    // Add more images with titles and descriptions...
+  ];
   const [selectedImage, setSelectedImage] = useState<ImageData | null>(null);
 
   const handleClick = (image: any) => {
