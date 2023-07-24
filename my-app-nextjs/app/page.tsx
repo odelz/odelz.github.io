@@ -1,6 +1,5 @@
 import React from 'react';
 import Image from 'next/image'
-import me from './profile.jpg'
 import { Noto, NotoItalic } from '../styles/fonts'
 import Layout from './components/Layout';
 
@@ -27,7 +26,7 @@ export default function Page() {
         </div>
         <div className="about-image">
           <Image
-            src={me}
+            src="/images/books/everyheart.jpg"
             width={500}
             height={500}
             alt="Picture of the author"
