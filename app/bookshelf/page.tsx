@@ -49,7 +49,8 @@ const MyBooksPage = () => {
 
   useEffect(() => {
     // Fetch books and reviews from the database
-  }, [fetchBooks]);
+    fetchBooks();
+  }, []);
 
   return (
     <div>
