@@ -14,7 +14,7 @@ type Props = {}
 
 const PortfolioPage = (props: Props) => {
 
-  const images: ImageData[] = [    {
+  const projects: ImageData[] = [    {
       src: 'blender.png',
       title: 'Image 1',
       description: 'Description for Image 1',
@@ -61,7 +61,7 @@ const PortfolioPage = (props: Props) => {
       )}
 
       <div className="grid">
-        {images.map((image, index) => (
+        {projects.map((image, index) => (
           <div className="grid-item" key={index}>
             <div onClick={() => handleClick(image)}>
               <Image
