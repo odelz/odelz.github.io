@@ -10,7 +10,7 @@ export default function Page() {
       <div className='home'>
         <div className="about-text">
           <h3 className={Noto.className}>
-            Hi, nice to meet you, I'm Odelia.
+            Hi, nice to meet you, I&apos;m Odelia.
           </h3>
           <h3 className={Noto.className}>
             I'm a{' '}

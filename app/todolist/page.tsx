@@ -31,8 +31,7 @@ const Todo = () => {
 
 
   useEffect(() => {
-    fetchTodos();
-  }, []);
+  }, [fetchTodos()]);
 
   return (
     <Layout>
