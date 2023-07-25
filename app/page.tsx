@@ -13,7 +13,7 @@ export default function Page() {
             Hi, nice to meet you, I&apos;m Odelia.
           </h3>
           <h3 className={Noto.className}>
-            I'm a
+            I&apos;m a
             <span className={NotoItalic.className}>
               dreamer
             </span>

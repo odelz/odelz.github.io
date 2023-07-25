@@ -34,20 +34,21 @@ const MyBooksPage = () => {
 
   const reference = ref(db, "books/");
 
-  const fetchBooks = async () => {
-    onValue(reference, (snapshot: { val: () => any; }) => {
-      const data = snapshot.val();
-      if (Array.isArray(data)) {
-        const books = data.filter((book: Book) => typeof book === 'object' && book !== null && 'title' in book && 'review' in book);
-        setBooks(books);
-      } else {
-        setBooks([]);
-      }
-    }
-    );
-  }
+  
 
   useEffect(() => {
+    const fetchBooks = async () => {
+      onValue(reference, (snapshot: { val: () => any; }) => {
+        const data = snapshot.val();
+        if (Array.isArray(data)) {
+          const books = data.filter((book: Book) => typeof book === 'object' && book !== null && 'title' in book && 'review' in book);
+          setBooks(books);
+        } else {
+          setBooks([]);
+        }
+      }
+      );
+    }
     // Fetch books and reviews from the database
     fetchBooks();
   }, []);

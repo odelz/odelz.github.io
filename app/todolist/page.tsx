@@ -16,21 +16,22 @@ const Todo = () => {
     });
   }
 
-  const fetchTodos = async () => {
-    onValue(reference, (snapshot) => {
-      const data = snapshot.val();
-      console.log(data);
-      if (data) {
-        const todoList = Object.keys(data).map((key) => ({ ...data[key], id: key }));
-        setTodos(todoList);
-      } else {
-        setTodos([]);
-      }
-    });
-  };
+  
 
 
   useEffect(() => {
+    const fetchTodos = async () => {
+      onValue(reference, (snapshot) => {
+        const data = snapshot.val();
+        console.log(data);
+        if (data) {
+          const todoList = Object.keys(data).map((key) => ({ ...data[key], id: key }));
+          setTodos(todoList);
+        } else {
+          setTodos([]);
+        }
+      });
+    };
     fetchTodos();
   }, []);
 
