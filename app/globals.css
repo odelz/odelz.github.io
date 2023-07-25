@@ -110,7 +110,7 @@
 
 
 .todo-container {
-  background-color: #d7aefb;
+  background-color: #fbdeca;
   color: #00A8E8;
   justify-content: center;
   align-items: center;
@@ -118,6 +118,17 @@
   height: 100vh; /* Added to make the container occupy the full viewport height */
 
 }
+
+
+.current-todo {
+  color:#00A8E8;
+  margin:auto;
+  text-align: center;
+  align-items: center;
+  max-width: 400px; /* Added to limit the width of the todo container */
+  padding: 20px; /* Added padding for better spacing */
+}
+
 .todo {
   color:#00A8E8;
   margin:auto;

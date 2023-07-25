@@ -8,7 +8,7 @@ const Todo = () => {
   const [todos, setTodos] = useState<{ title: string, note: string }[]>([]); // Specify the type explicitly
 
   const reference = ref(db, "todos/");
-  
+
   const addTodo = async () => {
     push(reference, {
       title: todo.title,
@@ -19,17 +19,17 @@ const Todo = () => {
   const fetchTodos = async () => {
     onValue(reference, (snapshot) => {
       const data = snapshot.val();
-      if (Array.isArray(data)) {
-        const todoList = data.filter((todo: any) => typeof todo === 'object' && todo !== null && 'title' in todo && 'note' in todo);
+      console.log(data);
+      if (data) {
+        const todoList = Object.keys(data).map((key) => ({ ...data[key], id: key }));
         setTodos(todoList);
       } else {
         setTodos([]);
       }
-    }
-    );
-  }
+    });
+  };
 
-  
+
   useEffect(() => {
     fetchTodos();
   }, []);
@@ -41,11 +41,27 @@ const Todo = () => {
           <div className="todo-header">
             Todo-App
           </div>
-          <form>
+
+          <label htmlFor="todo">
+            What do you have to do today?
+          </label>
+
+          <div className="current-todo">
+            {todos?.map((todo) => (
+              
+              <li key={todo.title}>
+                {todo.title}
+                {todo.note}
+              </li>
+            ))}
+          </div>
+
+          <form onSubmit={(e) => {
+            e.preventDefault();
+            addTodo();
+          }}>
             <div className="todo-input">
-              <label htmlFor="todo">
-                What do you have to do today?
-              </label>
+
               <input
                 text-align="center"
                 type="text"
@@ -81,22 +97,12 @@ const Todo = () => {
             <button
               type="submit"
               className="todo-btn"
-              onClick={addTodo}
             >
               Submit
             </button>
           </form>
         </div>
 
-
-        <div className="todo-content">
-          {todos?.map((i) => (
-            <p key={i.title}>
-              {todo.title}
-              {todo.note}
-            </p>
-          ))}
-        </div>
       </div>
     </Layout >
   )

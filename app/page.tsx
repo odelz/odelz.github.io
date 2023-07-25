@@ -26,7 +26,7 @@ export default function Page() {
         </div>
         <div className="about-image">
           <Image
-            src="/images/books/everyheart.jpg"
+            src="/images/profile.jpg"
             width={500}
             height={500}
             alt="Picture of the author"
