@@ -13,11 +13,11 @@ export default function Page() {
             Hi, nice to meet you, I&apos;m Odelia.
           </h3>
           <h3 className={Noto.className}>
-            I'm a{' '}
+            I'm a
             <span className={NotoItalic.className}>
               dreamer
-            </span>{' '}
-            and a{' '}
+            </span>
+            and a
             <span className={NotoItalic.className}>
               rebel
             </span>
