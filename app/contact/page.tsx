@@ -11,16 +11,13 @@ const ContactPage: React.FC = () => {
         </p>
         <ul>
           <li>
-            <a href="mailto:your-email@example.com">Email</a>
+            <a href="mailto:deelyohuang@gmail.com">Email</a>
           </li>
           <li>
-            <a href="https://twitter.com/your-twitter-handle">Twitter</a>
+            <a href="https://linkedin.com/in/odelia-huang">LinkedIn</a>
           </li>
           <li>
-            <a href="https://linkedin.com/in/your-linkedin-profile">LinkedIn</a>
-          </li>
-          <li>
-            <a href="https://github.com/your-github-username">GitHub</a>
+            <a href="https://github.com/odelz">GitHub</a>
           </li>
           {/* Add more social media links as needed */}
         </ul>

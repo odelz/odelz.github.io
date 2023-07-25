@@ -8,37 +8,39 @@ export default function Page() {
   return (
     < Layout>
       <div className='home'>
-        <div className="about-text">
-          <h3 className={Noto.className}>
+        <div className='about-text'>
+          <h2 className={Noto.className}>
             Hi, nice to meet you, I&apos;m Odelia.
-          </h3>
+          </h2>
           <h3 className={Noto.className}>
-            I&apos;m a
+            I&apos;m a {' '}
             <span className={NotoItalic.className}>
-              dreamer
+              dreamer{' '}
             </span>
-            and a
+            and a {' '}
             <span className={NotoItalic.className}>
-              rebel
+              rebel,{' '}
             </span>
-            , passionate about web development and creating beautiful, functional user experiences.
+            passionate about web development and creating beautiful, functional user experiences.
           </h3>
         </div>
         <div className="about-image">
           <Image
             src="/images/profile.jpg"
             width={500}
-            height={500}
+            height={950}
+            style={{ objectFit: 'cover', objectPosition: 'center' }}
             alt="Picture of the author"
           />
         </div>
       </div>
+
+
       <div style={{
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
-        background: 'linear-gradient(to bottom,#f18bce, #8EB8E5, #5E4AE3)',
         height: 'auto',
         minHeight: '100vh',
       }}>

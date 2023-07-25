@@ -1,4 +1,5 @@
 'use client'
+import Layout from "../components/Layout";
 import { ref, set, push, onValue } from "firebase/database";
 import React, { useEffect, useState } from 'react';
 import { db } from '../firebase';
@@ -54,7 +55,8 @@ const MyBooksPage = () => {
   }, []);
 
   return (
-    <div>
+    <Layout>
+
       <h1>My Books</h1>
       <ul>
         {books.map((book) => (
@@ -71,7 +73,7 @@ const MyBooksPage = () => {
           </li>
         ))}
       </ul>
-    </div>
+    </Layout>
   );
 };
 

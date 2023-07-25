@@ -12,8 +12,8 @@ export default function NavBar() {
         </div>
       </div>
       <div className="nav-links">
-          <Link href="/inspiration">
-            Inspiration
+          <Link href="/bookshelf">
+            Bookshelf
           </Link>
           <Link href="/portfolio" >
             Portfolio
