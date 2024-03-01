@@ -1,32 +1,29 @@
 {
   "name": "odelz.github.io",
-  "version": "0.1.0",
   "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "homepage": "https://odelz.github.io/",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint",
-    "deploy": "next build && git add -f out/ && git commit -m \"Deploy\" && git subtree push --prefix out origin gh-pages"
+    "dev": "vite",
+    "build": "vue-tsc && vite build",
+    "preview": "vite preview",
+    "lint": "eslint --ext .ts,.vue --ignore-path .gitignore .",
+    "deploy": "vite build && vite build --base=./ && gh-pages -d dist"
   },
   "dependencies": {
-    "@theme-ui/presets": "^0.16.0",
-    "@types/react-dom": "18.2.6",
-    "autoprefixer": "10.4.14",
-    "eslint": "8.43.0",
-    "eslint-config-next": "13.4.7",
-    "next": "^13.4.9",
-    "postcss": "8.4.24",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "sharp": "^0.32.2",
-    "tailwindcss": "3.3.2",
-    "theme-ui": "^0.16.0"
+    "eslint": "^8.56.0",
+    "install": "^0.13.0",
+    "npm": "^10.4.0",
+    "vue": "^3.4.15",
+    "vue-router": "^4.0.13"
   },
   "devDependencies": {
-    "@types/node": "^20.4.4",
-    "@types/react": "^18.2.15",
-    "firebase": "^10.1.0",
-    "typescript": "^5.1.6"
+    "@types/vue-router": "^2.0.0",
+    "@vitejs/plugin-vue": "^5.0.3",
+    "typescript": "^5.2.2",
+    "vite": "^5.1.0",
+    "vite-plugin-gh-pages": "^0.4.1",
+    "vue-tsc": "^1.8.27"
   }
 }
