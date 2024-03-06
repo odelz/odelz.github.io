@@ -1,5 +1,16 @@
+@font-face {
+  font-family: 'Boohong';
+  src: url('/Users/odeliahuang/Desktop/odelz.github.io/src/assets/Boohong.ttf') format('truetype'); /* Adjust the path and format as per your font file */
+  /* Add other font properties like font-weight and font-style if necessary */ 
+}
+
+@font-face {
+  font-family: 'Nunito';
+  src: url('/Users/odeliahuang/Desktop/odelz.github.io/src/assets/Nunito.ttf') format('truetype');
+}
+
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Boohong', Inter, system-ui, Avenir, Helvetica, Arial, sans-serif, 'Nunito';
   line-height: 1.5;
   font-weight: 400;
 

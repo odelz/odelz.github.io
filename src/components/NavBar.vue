@@ -2,7 +2,8 @@
     <nav>
         <ul>
             <li><router-link to="/">Home</router-link></li>
-            <li><router-link to="/about">About</router-link></li>
+            <li><router-link to="/blog">Blog</router-link></li>
+            <li><router-link to="/todolist">To Do List</router-link></li>
         </ul>
     </nav>
 </template>
@@ -15,23 +16,28 @@ export default {
 
 <style scoped>
 nav {
-    background-color: #f2f2f2;
+    background-color: #ee5d6c;
     padding: 10px;
+    
 }
 
 ul {
+    
     list-style-type: none;
-    margin: 0;
+    margin: 5px;
     padding: 0;
 }
 
 li {
     display: inline;
-    margin-right: 10px;
+    margin-right: 50px;
+    
+  
 }
 
 a {
+    font-family: 'Nunito', sans-serif;
     text-decoration: none;
-    color: #333;
+    color: #FFFFFF;
 }
 </style>
