@@ -28,8 +28,6 @@
 </template>
 
 <script setup lang="ts">
-import NameAnimation from '../components/NameAnimation.vue'
-
 
 
 </script>
