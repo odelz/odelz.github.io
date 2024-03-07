@@ -5,12 +5,12 @@
     <h2>My pronouns are they/them.</h2>
     <!-- First section: Image with text to the right -->
     <div class="section">
-      <img src="@/assets/me.jpg" alt="Image 1" class="image">
+      <img src="../assets/me.jpg" alt="Image 1" class="image">
       <div class="text">
         <h2>Basically...</h2>
         <p>I'm a software engineer and I love to create things. I'm currently writing my master's thesis on bias mitigation within Automatic Speech
           Recognition models and datasets. I'm also a huge fan of open source and I love to contribute to projects.
-          I'm currently learning Vue 3 and I'm excited to share my journey with you.</p>
+          I'm currently updating my website since CRA is now deprecated and I prefer Vue.</p>
       </div>
     </div>
 
@@ -22,7 +22,7 @@
         <h2>Text Title 2</h2>
         <p>I am a Chinese-American living in the city of Copenhagen, Denmark. I love to boulder, be creative and go to flea markets. I spend a lot of time with my friends, from making cute dinners to attending protests for climate change and the end of genocide</p>
       </div>
-      <img src="@/assets/IMG_0490.png" alt="Image 2" class="image">
+      <img src="../assets/IMG_0490.png" alt="Image 2" class="image">
     </div>
   </div>
 </template>
