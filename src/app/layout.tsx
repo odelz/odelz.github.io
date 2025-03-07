@@ -30,6 +30,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${nunito.variable} ${nunitoSans.variable} ${inter.variable} antialiased min-h-screen`}>
+
         {children}
         <PrivacyPolicy />
       </body>

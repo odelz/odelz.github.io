@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { LiaGithub, LiaInstagram, LiaLinkedin } from "react-icons/lia";
 import {ColorPalette} from "./components/colorPalette";
+import { PinterestCarousel } from "./components/pinterest/pinterestCarousel";
 
 export default function Home() {
   return (

@@ -10,6 +10,7 @@ const nextConfig: NextConfig = {
     config.resolve.alias = {
       ...config.resolve.alias,
       "@src": path.join(__dirname, "src"),
+      "@public": path.join(__dirname, "public"),
     };
     return config;
   },
