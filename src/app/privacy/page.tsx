@@ -68,7 +68,7 @@ export default function Privacy() {
           </section>
   
           <footer className="text-sm text-gray-500 mt-12 pt-4 border-t">
-            <p>Last updated: March 7, 2024</p>
+            <p>Last updated: March 7, 2025</p>
           </footer>
         </div>
       </div>
