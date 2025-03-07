@@ -1,5 +1,6 @@
 'use client'
 
+import Link from 'next/link'
 import { useState } from 'react'
 
 export const PrivacyPolicy = () => {
@@ -27,26 +28,15 @@ export const PrivacyPolicy = () => {
           </div>
           
           <div className="text-sm text-gray-600 dark:text-gray-400 space-y-2">
-            <p>
-              This website is a personal portfolio that does not collect any personal data.
-              However, it uses the following third-party services:
+          <p className="mb-4">
+              This website does not collect personal data. For more details about our privacy practices, please visit:
             </p>
-            
-            <ul className="list-disc pl-5 space-y-1">
-              <li>GitHub Pages for hosting</li>
-              <li>Google Fonts for typography</li>
-            </ul>
-            
-            <p>
-              These services may collect anonymous usage data. For more information,
-              please refer to their respective privacy policies.
-            </p>
-          </div>
-
-          <div className="pt-4 border-t border-gray-200 dark:border-gray-700">
-            <p className="text-xs text-gray-500">
-              Last updated: March 7, 2024
-            </p>
+            <Link 
+              href="/privacy"
+              className="text-pink-600 hover:underline"
+            >
+              Full Privacy Policy
+            </Link>
           </div>
         </div>
       )}
