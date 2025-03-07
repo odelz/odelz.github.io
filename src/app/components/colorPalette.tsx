@@ -18,7 +18,7 @@ const nouns = [
   'Pickle Rick', 'Knight', 'Blergh', 'Lark', 'Pollypocket', 'Goose', 'Blob', 'blipblop'
 ]
 
-export default function ColorPalette() {
+export const ColorPalette = () => {
   const [colors, setColors] = useState<Color[]>([])
   const [savedPalettes, setSavedPalettes] = useState<Color[][]>([])
 

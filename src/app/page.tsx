@@ -1,13 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
 import { LiaGithub, LiaInstagram, LiaLinkedin } from "react-icons/lia";
-import ColorPalette from "./components/colorPalette";
+import {ColorPalette} from "./components/colorPalette";
 
 export default function Home() {
   return (
-    <div className="min-h-screen p-8 font-[family-name:var(--font-geist-sans)]">
+    <div className="p-8 ">
       <main className="flex flex-col gap-8">
-        <h1 className="text-5xl leading-tight font-boohong">Hey! It&apos;s me, Odelia G Huang.</h1>
+        <h1 className="text-5xl leading-tight font-nunito">Hey! It&apos;s me, Odelia G Huang.</h1>
         <h2 className="text-2xl">My pronouns are they/them.</h2>
 
 
