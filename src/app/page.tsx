@@ -1,7 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { LiaGithub, LiaInstagram, LiaLinkedin } from "react-icons/lia";
- 
+import ColorPalette from "./components/colorPalette";
+
 export default function Home() {
   return (
     <div className="min-h-screen p-8 font-[family-name:var(--font-geist-sans)]">
@@ -35,7 +36,7 @@ export default function Home() {
         </div>
 
         {/* First section: Image with text to the right */}
-        <div className="flex flex-col md:flex-row justify-between items-center gap-8 my-5">
+        <section className="flex flex-col md:flex-row justify-between items-center gap-8 my-5">
           <div className="w-full md:w-1/4">
             <Image
               src="/me.jpg"
@@ -54,12 +55,12 @@ export default function Home() {
               Recognition models and datasets.
             </p>
           </div>
-        </div>
+        </section>
 
         <hr className="my-8 border-gray-200 dark:border-gray-700" />
 
         {/* Second section: Image with text to the left */}
-        <div className="flex flex-col md:flex-row-reverse justify-between items-center gap-8 my-5">
+        <section className="flex flex-col md:flex-row-reverse justify-between items-center gap-8 my-5">
           <div className="w-full md:w-1/4">
             <Image
               src="/IMG_0490.png"
@@ -76,8 +77,14 @@ export default function Home() {
               I spend a lot of time with my friends, from making cute dinners to knitting and building to discussing what we think the future will look like.
             </p>
           </div>
-        </div>
+        </section>
+
+        <section className="my-16">
+          <h2 className="text-3xl mb-4">Fun Frontend Stuff</h2>
+            <ColorPalette />
+        </section>
       </main>
+
     </div>
   );
 }
