@@ -1,0 +1,10 @@
+[install]
+peer = true
+hoistPattern = ["*"]
+
+[typescript]
+typecheck = true
+verboseTypeErrors = true
+
+[debug]
+tsConfigPath = "tsconfig.json"

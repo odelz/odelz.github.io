@@ -19,6 +19,8 @@ const nextConfig: NextConfig = {
     // your project has ESLint errors.
     ignoreDuringBuilds: true,
   },
+  basePath: process.env.NODE_ENV === 'production' ? '/odelz.github.io' : '',
+
 };
 
 export default nextConfig;
