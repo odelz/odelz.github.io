@@ -19,7 +19,14 @@ const nextConfig: NextConfig = {
     // your project has ESLint errors.
     ignoreDuringBuilds: true,
   },
-  basePath: process.env.NODE_ENV === 'production' ? '/odelz.github.io' : '',
+  basePath: process.env.PAGES_BASE_PATH || '',
+  assetPrefix: process.env.PAGES_BASE_PATH || '',
+  // Configure static file serving
+  experimental: {
+    optimizeCss: true, // Enable CSS optimization
+  },
+  // Add trailing slash to ensure proper asset loading
+  trailingSlash: true,
 
 };
 

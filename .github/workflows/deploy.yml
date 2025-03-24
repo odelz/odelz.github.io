@@ -51,10 +51,13 @@ jobs:
             ${{ runner.os }}-nextjs-${{ hashFiles('**/bun.lockb') }}-
 
       - name: Build with Next.js
-        run: bun run build
+        run: |
+            touch .nojekyll
+            bun run build
         env:
-          PINTEREST_ACCESS_TOKEN: ${{ secrets.PINTEREST_ACCESS_TOKEN }}
-          PAGES_BASE_PATH: ${{ steps.setup_pages.outputs.base_path }}
+            PINTEREST_ACCESS_TOKEN: ${{ secrets.PINTEREST_ACCESS_TOKEN }}
+            PAGES_BASE_PATH: ${{ steps.setup_pages.outputs.base_path }}
+            NEXT_PUBLIC_BASE_PATH: ${{ steps.setup_pages.outputs.base_path }}
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
