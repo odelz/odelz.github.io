@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { IoRefreshCircle, IoSaveOutline } from 'react-icons/io5';
 
 interface Color {
@@ -46,10 +46,13 @@ export const ColorPalette = () => {
   const copyToClipboard = (hex: string) => {
     navigator.clipboard.writeText(hex)
   }
-
+  
+  useEffect(() => {
+    generatePalette()
+  }, [])
   return (
     <div className="w-full mx-auto p-4">
-      <h2 className="text-2xl font-bold mb-4">Color Palette Generator</h2>
+      <h2 className="text-xl mb-4">Color Palette Generator</h2>
       <div className="grid grid-cols-5 gap-2 mb-4">
         {colors.map((color, index) => (
           <div

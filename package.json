@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "generate-data": "bun run src/app/api/generateData.ts",
+    "generate-data": "bun run src/app/scripts/generateData.ts",
     "dev": "bun run generate-data && bunx --bun next dev",
-    "build": "bun run generate-data && bunx --bun next build",
+    "build": "bun run generate-data && next build",
     "start": "bunx --bun next start",
     "lint": "bunx --bun next lint"
   },

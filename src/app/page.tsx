@@ -2,7 +2,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { LiaGithub, LiaInstagram, LiaLinkedin } from "react-icons/lia";
 import {ColorPalette} from "./components/colorPalette";
-import { PinterestCarousel } from "./components/pinterest/pinterestCarousel";
+import { PinterestGrid } from "./components/pinterest/pinterestGrid";
+import ClientOnly from "./components/clientOnly";
+import { ChatApplication } from "./components/chatApplication";
 
 export default function Home() {
   return (
@@ -80,9 +82,23 @@ export default function Home() {
           </div>
         </section>
 
+        <hr className="my-8 border-gray-200 dark:border-gray-700" />
+
+
         <section className="my-16">
           <h2 className="text-3xl mb-4">Fun Frontend Stuff</h2>
             <ColorPalette />
+        </section>
+
+        <hr className="my-8 border-gray-200 dark:border-gray-700" />
+
+        <section className="my-16">
+          <h2 className="text-3xl mb-4">Things That Inspire Me</h2>
+          <div className="w-full">
+            <ClientOnly>
+              <PinterestGrid />
+            </ClientOnly>
+          </div>
         </section>
       </main>
 
