@@ -22,6 +22,7 @@ export interface PinImage {
     description: string
     dominant_color: string 
     media: PinMedia
+    created_at: string
   }
   
   export interface PinterestResponse {

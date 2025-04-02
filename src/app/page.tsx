@@ -85,7 +85,8 @@ export default function Home() {
 
 
         <section className="my-16">
-          <h2 className="text-3xl mb-4">Fun Frontend Stuff</h2>
+          
+          <h2 className="text-3xl mb-4">Fun Coding Stuff</h2>
             <ColorPalette />
         </section>
 

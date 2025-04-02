@@ -30,7 +30,7 @@ export async function fetchPinterestPins(): Promise<Pin[]> {
     }
     // If auth works, fetch pins
     
-    const pinsResponse = await fetch('https://api.pinterest.com/v5/pins', {
+    const pinsResponse = await fetch('https://api.pinterest.com/v5/pins?page_size=60', {
       method: 'GET',
       headers: {
         'Authorization': `Bearer ${token}`,
@@ -54,57 +54,49 @@ export async function fetchPinterestPins(): Promise<Pin[]> {
 
 export async function generatePinterestData() {
   if (!FEATURES.PINTEREST_ENABLED) {
-    console.log('📍 Pinterest integration disabled')
-    return
+    console.log('📍 Pinterest integration disabled');
+    return;
   }
-  const dataDir = join(process.cwd(), 'public', 'data')
-  const pinsFilePath = join(dataDir, 'pins.json')
 
-  mkdirSync(dataDir, { recursive: true })
+  const dataDir = join(process.cwd(), 'public', 'data');
+  const pinsFilePath = join(dataDir, 'pins.json');
 
-  console.log('📍 Fetching Pinterest pins...')
-  const newPins = await fetchPinterestPins()
+  mkdirSync(dataDir, { recursive: true });
+
+  console.log('📍 Fetching Pinterest pins...');
+  const newPins = await fetchPinterestPins();
+
   // Check if the pins.json file exists
   if (existsSync(pinsFilePath)) {
-    console.log('📂 Checking existing cached pins...')
-    const cachedPins = JSON.parse(readFileSync(pinsFilePath, 'utf-8')) as Pin[]
+    console.log('📂 Checking existing cached pins...');
+    const cachedPins = JSON.parse(readFileSync(pinsFilePath, 'utf-8')) as Pin[];
 
-    // Compare the last fetched pin with the first stored pin
-    const lastFetchedPin = newPins[0]
-    const firstStoredPin = cachedPins[0]
+    // Compare the `created_at` date of the last cached pin with the new pins
+    const lastCachedPinDate = new Date(cachedPins[0].created_at).getTime();
 
-    if (lastFetchedPin.id === firstStoredPin.id) {
-      console.log('✅ No new pins found. Skipping update.')
-      return
-    }
+    // Filter new pins that are older than the last cached pin
+    const newPinsToAdd = newPins.filter(
+      (pin) => new Date(pin.created_at).getTime() > lastCachedPinDate
+    );
 
-    // Find the index where new pins start
-    const newPinsStartIndex = newPins.findIndex(
-      (pin) => pin.id === firstStoredPin.id
-    )
+    if (newPinsToAdd.length > 0) {
+      console.log(`✨ Found ${newPinsToAdd.length} new pins. Appending to the top of the cache...`);
+      const updatedPins = [...newPinsToAdd, ...cachedPins];
 
-    if (newPinsStartIndex !== -1) {
-      console.log('✨ New pins found. Appending to existing data...')
-      const pinsToAppend = newPins.slice(0, newPinsStartIndex)
-      const updatedPins = [...pinsToAppend, ...cachedPins]
-
-      writeFileSync(pinsFilePath, JSON.stringify(updatedPins, null, 2))
-      console.log(`✅ Appended ${pinsToAppend.length} new pins to the cache.`)
+      // Remove duplicates based on the `id` property
+      const uniquePins = updatedPins.filter(
+        (pin, index, self) => self.findIndex((p) => p.id === pin.id) === index
+      );
+      // Write the updated pins to the file
+      writeFileSync(pinsFilePath, JSON.stringify(uniquePins, null, 2));
+      console.log(`✅ Appended ${uniquePins.length} new pins to the cache.`);
     } else {
-      console.log('✨ Completely new set of pins found. Replacing cache...')
-      const updatedPins = [...newPins, ...cachedPins]
-      writeFileSync(pinsFilePath, JSON.stringify(updatedPins, null, 2))
-      console.log(`✅ Saved ${newPins.length} new pins.`)
+      console.log('✅ No new pins found. Skipping update.');
     }
   } else {
     // If no cache exists, save the new pins
-    console.log('📂 No cached pins found. Saving new pins...')
-    writeFileSync(pinsFilePath, JSON.stringify(newPins, null, 2))
-    console.log(`✅ Saved ${newPins.length} Pinterest pins`)
+    console.log('📂 No cached pins found. Saving new pins...');
+    writeFileSync(pinsFilePath, JSON.stringify(newPins, null, 2));
+    console.log(`✅ Saved ${newPins.length} Pinterest pins`);
   }
-  writeFileSync(
-    join(dataDir, 'pins.json'),
-    JSON.stringify(newPins, null, 2)
-  )
-  console.log(`✅ Saved ${newPins.length} Pinterest pins`)
 }
