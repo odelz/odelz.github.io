@@ -3,7 +3,6 @@ import Link from "next/link";
 import { LiaGithub, LiaInstagram, LiaLinkedin } from "react-icons/lia";
 import {ColorPalette} from "./components/colorPalette";
 import { PinterestGrid } from "./components/pinterest/pinterestGrid";
-import ClientOnly from "./components/clientOnly";
 import { ChatApplication } from "./components/chatApplication";
 
 export default function Home() {
@@ -95,9 +94,7 @@ export default function Home() {
         <section className="my-16">
           <h2 className="text-3xl mb-4">Things That Inspire Me</h2>
           <div className="w-full">
-            <ClientOnly>
               <PinterestGrid />
-            </ClientOnly>
           </div>
         </section>
       </main>
